@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gironkey", "Gironkey\Gironkey.csproj", "{CCF9686F-5194-4E65-B254-C6E0798DF232}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gironkey.Tests", "Gironkey.Tests\Gironkey.Tests.csproj", "{96469D58-9A21-48B6-AED6-4E7EBFEC8136}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCF9686F-5194-4E65-B254-C6E0798DF232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF9686F-5194-4E65-B254-C6E0798DF232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF9686F-5194-4E65-B254-C6E0798DF232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF9686F-5194-4E65-B254-C6E0798DF232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96469D58-9A21-48B6-AED6-4E7EBFEC8136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96469D58-9A21-48B6-AED6-4E7EBFEC8136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96469D58-9A21-48B6-AED6-4E7EBFEC8136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96469D58-9A21-48B6-AED6-4E7EBFEC8136}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
