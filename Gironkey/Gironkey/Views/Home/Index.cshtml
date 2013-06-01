@@ -40,6 +40,13 @@
             @Html.ValidationMessageFor(model => model.Address)
         </div>
    
+         <div class="editor-label">
+            @Html.LabelFor(model => model.LatLong)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LatLong)
+            @Html.ValidationMessageFor(model => model.LatLong)
+        </div>
         <p>
             <input type="submit" value="Search" />
         </p>

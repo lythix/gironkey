@@ -10,8 +10,37 @@
 
 <fieldset>
     <legend>Search Results</legend>
-    
-    @ViewBag.Result
+
+    @{
+        var feature = ((Rootobject)ViewBag.Result).features.FirstOrDefault();
+    }
+
+    @if (feature != null)
+    {
+        
+        if (Model.LatLong != null)
+        {
+            <p>Search results for @Html.Raw(Model.LatLong)</p>
+        }
+ 
+        <span>Lat: @Html.Raw(feature.properties.centlat)</span><br />
+        <span>Long: @Html.Raw(feature.properties.centlong)</span> <br />
+        <span>Property size (m²): @Html.Raw(feature.properties.area)</span> <br />
+        <span>Address: @Html.Raw(feature.properties.address_no_from)@Html.Raw(feature.properties.address_no_from_suffix)
+            @Html.Raw(feature.properties.rd_name) @Html.Raw(feature.properties.rd_type)
+        </span>
+    }
+
+
+    @*    @if(IsPost) { 
+     <p>Hello, the time is @DateTime.Now and this page is a postback!</p>
+} else { 
+     <p>Hello, today is: </p> @DateTime.Now
+}*@
+
+
+
+    <br />
 
     @*   <div class="display-label">
         @Html.LabelFor(model => model.Address)
@@ -34,6 +63,6 @@
     *@
     <br />
 
-   Google Map place holder
+    Google Map place holder
 
 </fieldset>

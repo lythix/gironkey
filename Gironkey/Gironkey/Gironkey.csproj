@@ -184,6 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Models\Rootobject.cs" />
     <Compile Include="Models\DataResult.cs" />
     <Compile Include="Services\GironkeyService.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -333,7 +334,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>53835</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50081/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

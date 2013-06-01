@@ -15,11 +15,9 @@ namespace Gironkey.Controllers
             if (ModelState.IsValid)
             {
                 Console.WriteLine(query.Address);
-                if (!string.IsNullOrEmpty(query.Address))
+                if (!string.IsNullOrEmpty(query.Address) || !string.IsNullOrEmpty(query.LatLong))
                 {
                     return RedirectToAction("Search", query);
-
-                    // return RedirectToAction("Search", "Home", query);
                 }
             }
             ViewBag.Message = "(Giraffes by name, monkeys by nature).";
@@ -51,16 +49,18 @@ namespace Gironkey.Controllers
             {
                 var service = new GironkeyService();
                 // ViewBag.Result = service.GetDataForAddress(query.Address);
-                query.LatLong = "115.90114501745099,-31.915819563332345";
-                query.LatLong = "115.802821,-31.940334";
-                ViewBag.Result = service.CallLandgate(query.LatLong); // .CallLandgateGetJson();
+                // query.LatLong = "115.90114501745099,-31.915819563332345";
+                // query.LatLong = "115.802821,-31.940334";
+
+                if (!string.IsNullOrEmpty(query.LatLong))
+                {
+                    ViewBag.Result = service.CallLandgate(query.LatLong); // .CallLandgateGetJson();
+                }
 
                 Console.WriteLine(query.Address);
             }
 
             return View(query);
         }
-
-
     }
 }
