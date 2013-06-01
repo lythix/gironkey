@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model Gironkey.Models.ZoneQuery
+@{
+    ViewBag.Title = "Gironkey";
 }
 @section featured {
     <section class="featured">
@@ -8,18 +9,34 @@
                 <h1>@ViewBag.Title.</h1>
                 <h2>@ViewBag.Message</h2>
             </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+            <p>So, what are we working on you may ask. Good question! Our goal is to solve Western Australia's current issue of housing shortage. In a weekend ...??? (some people asked). Well, here's the thing. If we don't start kicking the ball, we don't score a goal - simple as that.</p>
+            <p>We are updating our ideas, our wants, our needs, our milestones, our high-fives, our midnight coffee's and apologetic calls to our better halfs, on here, by the hour.</p>
+            <p>If you come for nothing other then just saying hello, we're cool with that. With that said, we are looking to kick some serious net ripping volleys; and damn, we are going to celebrate when we do.</p>
+            <br/>
+            <p>Talk to us, have fun with us, join us.</p>
         </div>
     </section>
 }
 <h3>We suggest the following:</h3>
-<ol class="round">
+
+<fieldset>
+    <legend>tblPortfolio</legend>
+        
+    Enter Address to search
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+   
+    <p>
+        <input type="submit" value="Search" />
+    </p>
+</fieldset>
+
+@*<ol class="round">
     <li class="one">
         <h5>Getting Started</h5>
         ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
@@ -42,4 +59,4 @@
         and price for your applications.
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
-</ol>
+</ol>*@
