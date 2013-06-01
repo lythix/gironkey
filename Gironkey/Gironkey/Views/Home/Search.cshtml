@@ -10,8 +10,10 @@
 
 <fieldset>
     <legend>Search Results</legend>
+    
+    @ViewBag.Result
 
-    <div class="display-label">
+    @*   <div class="display-label">
         @Html.LabelFor(model => model.Address)
     </div>
     <div class="display-field">
@@ -29,7 +31,7 @@
     Long: @Html.Raw(((DataResult)ViewBag.Result).Long)<br/>
     SquareMeterSize: @Html.Raw(((DataResult)ViewBag.Result).SquareMeterSize)<br/>
     ZoneCode: @Html.Raw(((DataResult)ViewBag.Result).ZoneCode)<br/>
-    
+    *@
     <br />
 
    Google Map place holder

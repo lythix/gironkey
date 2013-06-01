@@ -50,8 +50,11 @@ namespace Gironkey.Controllers
             if (ModelState.IsValid)
             {
                 var service = new GironkeyService();
-                ViewBag.Result = service.GetDataForAddress(query.Address);
-                
+                // ViewBag.Result = service.GetDataForAddress(query.Address);
+                query.LatLong = "115.90114501745099,-31.915819563332345";
+                query.LatLong = "115.802821,-31.940334";
+                ViewBag.Result = service.CallLandgate(query.LatLong); // .CallLandgateGetJson();
+
                 Console.WriteLine(query.Address);
             }
 
