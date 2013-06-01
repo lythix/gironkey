@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.Mvc;
+using Gironkey.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Gironkey;
 using Gironkey.Controllers;
@@ -19,7 +20,8 @@ namespace Gironkey.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            var query = new ZoneQuery();
+            ViewResult result = controller.Index(query) as ViewResult;
 
             // Assert
             Assert.AreEqual("Modify this template to jump-start your ASP.NET MVC application.", result.ViewBag.Message);

@@ -1,0 +1,37 @@
+﻿@using System.Collections
+@using Gironkey.Models
+@model Gironkey.Models.ZoneQuery
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Search Results</h2>
+
+<fieldset>
+    <legend>Search Results</legend>
+
+    <div class="display-label">
+        @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+    <br/>
+    HouseNumber: @Html.Raw(((DataResult)ViewBag.Result).HouseNumber)<br/>
+    Address1: @Html.Raw(((DataResult)ViewBag.Result).AddressOne)<br/>
+    Address2: @Html.Raw(((DataResult)ViewBag.Result).AddressTwo)<br/>
+    Suburb: @Html.Raw(((DataResult)ViewBag.Result).Suburb)<br/>
+    State: @Html.Raw(((DataResult)ViewBag.Result).State)<br/>
+    PostCode: @Html.Raw(((DataResult)ViewBag.Result).PostCode)<br/>
+    Country: @Html.Raw(((DataResult)ViewBag.Result).Country)<br/>
+    Lat: @Html.Raw(((DataResult)ViewBag.Result).Lat)<br/>
+    Long: @Html.Raw(((DataResult)ViewBag.Result).Long)<br/>
+    SquareMeterSize: @Html.Raw(((DataResult)ViewBag.Result).SquareMeterSize)<br/>
+    ZoneCode: @Html.Raw(((DataResult)ViewBag.Result).ZoneCode)<br/>
+    
+    <br />
+
+   Google Map place holder
+
+</fieldset>
