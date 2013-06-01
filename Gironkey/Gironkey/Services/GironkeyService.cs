@@ -28,8 +28,8 @@ namespace Gironkey.Services
                     State = "WA",
                     PostCode = "6000",
                     Country = "Australia",
-                    Lat = "115",
-                    Long = "-35",
+                    Latitude = "115",
+                    Longitude = "-35",
                     SquareMeterSize = "600",
                     ZoneCode = "R20"
                 };

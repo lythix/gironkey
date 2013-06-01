@@ -12,8 +12,8 @@ namespace Gironkey.Models
         public string State { get; set; }
         public string PostCode { get; set; }
         public string Country { get; set; }
-        public string Lat { get; set; }
-        public string Long { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
         public string SquareMeterSize { get; set; }
         public string ZoneCode { get; set; }
     }
