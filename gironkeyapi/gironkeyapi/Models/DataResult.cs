@@ -18,6 +18,9 @@ namespace gironkeyapi.Models
         public string Latitude { get; set; }
         public string Longitude { get; set; }
         public string Area { get; set; }
+        public int Zoning { get; set; }
+        public decimal BlockDivision { get; set; }
+
         //public string ZoneCode { get; set; }
     }
 }

@@ -20,62 +20,17 @@ namespace gironkeyapi.Tests.Controllers
             ValuesController controller = new ValuesController();
 
             // Act
-            IEnumerable<string> result = controller.Get();
+            string latitude = "-31.940496";
+            string longitude = "115.802877";
+            var result = controller.Get(latitude, longitude);
 
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(2, result.Count());
-            Assert.AreEqual("value1", result.ElementAt(0));
-            Assert.AreEqual("value2", result.ElementAt(1));
+            Assert.AreEqual("value1", result);
         }
 
-        [TestMethod]
-        public void GetById()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
+       
 
-            // Act
-            string result = controller.Get(5);
-
-            // Assert
-            Assert.AreEqual("value", result);
-        }
-
-        [TestMethod]
-        public void Post()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
-
-            // Act
-            controller.Post("value");
-
-            // Assert
-        }
-
-        [TestMethod]
-        public void Put()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
-
-            // Act
-            controller.Put(5, "value");
-
-            // Assert
-        }
-
-        [TestMethod]
-        public void Delete()
-        {
-            // Arrange
-            ValuesController controller = new ValuesController();
-
-            // Act
-            controller.Delete(5);
-
-            // Assert
-        }
     }
 }
